@@ -26,7 +26,6 @@ $(".btn").click(function () {
                             gameOver();
                         }
                     }
-
                 }
             }
         }
