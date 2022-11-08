@@ -10,7 +10,7 @@ body {
 
 
 /* STRUCTURE---------------MOBILE FIRST----------small screen---*/
-button {
+input[type="button"] {
     background-color: var(--backgroundText);
     display: block;
     margin: auto;
@@ -19,7 +19,7 @@ button {
     border-radius: 20%;
 }
 
-button.started {
+input[type="button"].started {
     visibility: hidden;
 }
 
@@ -83,10 +83,6 @@ p {
 
 /* screen between 640px and 850px --------------------------------------------------- */
 @media screen and (min-width: 640px) and (max-width: 850px) {
-    button {
-        padding: 1rem;
-    }
-
     .container {
         width: 90%;
     }
@@ -109,6 +105,10 @@ p {
 
 /* screen greater than 850px --------------------------------------------------- */
 @media screen and (min-width: 850px) {
+    input[type="button"] {
+        padding: 1rem;
+    }
+
     .container {
         width: 70%;
     }
