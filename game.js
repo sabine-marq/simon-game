@@ -3,12 +3,13 @@ let gameStarted = false;
 const sequenceRandomButtonIndexes = [];
 const sequenceClickedButtonIndexes = [];
 //once key pressed the game starts
-$(document).keypress(function () {
+$(".start").click(function () {
     sequenceRandomButtonIndexes.length = 0;
     if (gameStarted === false) {
         addRandomButtonIndex();
     }
     gameStarted = true;
+    $(".start").addClass("started");
 });
 //once button clicked sequence of clicked button stored and compared to the random sequence
 $(".btn").click(function () {
@@ -63,7 +64,8 @@ function gameOver(){
     }, 100);
     let audio = new Audio("sounds/wrong.mp3");
     audio.play();
-    $("h1").text("Game Over, Press Any Key to Restart");
+    $("h1").text("Game Over, Press Go to Restart");
+    $(".start").removeClass("started");
     sequenceClickedButtonIndexes.length = 0;
     sequenceRandomButtonIndexes.length = 0;
     gameStarted = false;
